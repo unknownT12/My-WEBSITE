@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 5;
+}
+
+.container-fluid {
+    padding: 5 20px;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .genre {
+    width: 30%;
+  }
+  
+  .movie-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .movie-list li {
+    margin-bottom: 20px;
+  }
+  
+  .movie-list li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .movie-list li img {
+    width: 50%; /* Resized movie poster sizes to 50% */
+    height: auto;
+    transition: transform 0.3s;
+  }
+  
+  .movie-list li:hover img {
+    transform: scale(1.1);
+    border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+  }
+  .movie-item:hover::before {
+    content: attr(data-description);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(148, 128, 128, 0.111);
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+  }
